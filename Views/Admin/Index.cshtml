@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+@model List<News>
+
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Välkommen till våran hemsidan</h1>
+        <a a asp-action="About" asp-controller="Home" class="hero-länk">Lär dig mer</a>
+    </div>
+</div>
+
+<div class="NewsInfoContainer">
+    <h1>Nyheter</h1>
+    <ul>
+        @foreach (var news in Model)
+        {
+            <div class="NewsInfo">
+            <li><h3>@news.Titel</h3></li>
+            <p> @news.Content </p> 
+            <p> @news.Author.AuthorNamn</p>
+            </div>
+        }
+    </ul>
+        <a a asp-action="Index" asp-controller="Crud" class="hero-länk">Fixa nyheter</a>
+
+</div>
+
+<div class="text-container">
+    <img src="~/Bilder/Backatorp_maskot.jpg" alt="bild på msakot">
+    <div class="bröd-text">
+        <p>
+            De aktiviteter vi har: <br />
+
+            <br /> TruppGymnastik i tre grupper (kontakta kanslit för mer info) <br />
+            Fotboll -18 -17 -16 15 -14-13 -12 -11 -10 -09 -08 -07 -Herr- & Damjunior <br />
+
+            <br />Äldre ungdomar ( läs gubbar/gummor) spelar fotboll inomhus när det blir kallt och går ut på konstgräset när det är varmt. <br />
+
+            <br /> Saknar ni något? <br />
+
+            <br />Vår klubb växer så det knakar men den är föräldradriven. Är det någon idrott ni vill starta upp och träna, med barn, ungdomar eller vuxna? Kontakta då oss på kansliet så berättar vi mera om våra möjligheter att hjälpa er igång. <br />
+        </p>
+    </div>
+
+
+
+</div>

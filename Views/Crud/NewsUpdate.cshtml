@@ -1,0 +1,25 @@
+﻿@model News
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div>
+		<form asp-action="NewsUpdate">
+			Titel <br />
+			<input asp-for="Titel" /><br />
+			Innehåll <br />
+			<input asp-for="Content" /><br />
+			Skirven av <br />
+			<select asp-for="AuthorId">
+				@foreach (Author author in ViewBag.Author)
+				{
+					<option value="@author.Id">@author.AuthorNamn</option>
+				}
+			</select><br />
+			<button type="submit">Spara</button>
+		</form>
+	</div>
+</body>
+</html>
+

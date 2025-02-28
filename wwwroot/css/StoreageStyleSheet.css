@@ -1,0 +1,89 @@
+﻿/* Center the picture */
+
+.center {
+    text-align: center;
+    margin:2rem;
+}
+
+/* Calendar tab */
+.calendar {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Two columns layout */
+.ItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: none:
+}
+
+/* Individual item style */
+.Item {
+    width: 30%; /* Adjust the width as needed */
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+}
+
+/* Button style */
+.button {
+ 
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #333;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.button:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #ff5733;
+}
+
+
+#datePicker {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+}
+
+InfoBigArea {
+    display: flex;
+    clear: both;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    margin: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.InfoBigArea table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+    .InfoBigArea table th, td {
+        padding: 12px 15px;
+        text-align: left;
+    }

@@ -1,0 +1,32 @@
+﻿@model Anvandare
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/skapa_konto.css">
+    <title>Förådd hörnan</title>
+</head>
+<body>
+
+    <a id="CreatePicture" asp-action="Index" asp-controller="Home"><img src="~/Bilder/Backatorp_banner.jpg" alt="kort på loggan"></a>
+    <div class="skapa_konto-box">
+        <h1>Skapa konto</h1>
+        <form asp-action="CreateAcountPage">
+            <label>Användarnamn:</label>
+            <input asp-for="AnvandareNamn" required />
+
+            <label>Lösernrd:</label>
+            <input asp-for="Losernord" type="password" required>
+
+            <label>Skriv in lösernrd igen:</label>
+            <input asp-for="Losernord" type="password" required>
+
+            <button type="submit">skapa konto</button>
+        </form>
+        <p>Har du redan ett konto? <a asp-action="LoginPage" asp-controller="Admin"> Logga in</a></p>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

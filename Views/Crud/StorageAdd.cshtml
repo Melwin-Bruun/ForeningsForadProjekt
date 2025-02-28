@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+
+@model Storeage
+
+<div>
+    <h1>Lägg till föremål</h1>
+    <form asp-action="StorageAdd">
+        <label>Namnet för föremål</label>
+        <input asp-for="ItemName" />
+
+        <label>Antal:</label>
+        <input asp-for="Amount">
+
+        <select asp-for="booked">
+                <option value="False">False</option>
+        </select><br />
+
+        <button type="submit">skapa föremål</button>
+    </form>
+</div>

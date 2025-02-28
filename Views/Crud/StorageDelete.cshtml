@@ -1,0 +1,24 @@
+﻿
+
+@model Storeage
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div>
+   <h1>Ta bort föremål</h1>
+   <form asp-action="StorageDelete">
+        <h1> @Model.ItemName</h1> <br />
+         <br />
+        <h1> @Model.Amount</h1> <br />
+        <br />
+
+            <button type="submit">Ta bort</button>
+   </form>
+</div>
+
+</body>
+</html>

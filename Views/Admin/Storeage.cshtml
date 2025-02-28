@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+
+@model List<Storeage>
+
+<div class="center">
+    <!-- Picture -->
+    <img src="~/Bilder/Backatorp_maskot.jpg" alt="bild på msakot">
+
+</div>
+
+<a a asp-action="StorageIndex" asp-controller="Crud" class="hero-länk">Fixa storage</a>
+
+
+
+
+
+<!-- Changeable calendar tab -->
+<div class="calendar">
+    <input type="text" id="datePicker">
+<!-- Calendar content goes here -->
+    </div>
+
+
+<div class="center">
+    <!-- Items container -->
+    <div class="ItemsContainer">
+        <!-- Item 1 -->
+        <div class="Item">
+            <h3>Item 1</h3>
+            <button class="button"><a asp-action="#" asp-controller="Admin">Boka</a></button>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="Item">
+            <h3>Item 2</h3>
+            <button class="button"><a asp-action="#" asp-controller="Admin">Boka</a></button>
+        </div>
+
+        <!-- Add more items here -->
+        <div class="Item">
+            <h3>Item 4</h3>
+            <button class="button"><a asp-action="#" asp-controller="Admin">Boka</a></button>
+        </div>
+        <div class="Item">
+            <h3>Item 3</h3>
+            <button class="button"><a asp-action="#" asp-controller="Admin">Boka</a></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+        
+
+

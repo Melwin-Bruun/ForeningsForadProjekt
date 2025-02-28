@@ -1,0 +1,23 @@
+﻿
+@model Storeage
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<div>
+	<h1> Kan bara ändra namn och antal</h1>
+	<form asp-action="StorageUpdate">
+		Namn <br />
+		<input asp-for="ItemName" /><br />
+		Antal <br />
+		<input asp-for="Amount" /><br />
+			<br />
+			
+		<button type="submit">Spara</button>
+	</form>
+</div>
+</body>
+</html>

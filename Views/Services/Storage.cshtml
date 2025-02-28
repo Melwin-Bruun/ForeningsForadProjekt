@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@model List<Storeage>
+
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Backatorp Matrial Förråd</h1>
+        <a class="hero-länk" asp-action="Storeage" asp-controller="Admin">Boka</a>
+    </div>
+</div>
+
+<div class="InfoContainer">
+    <div class="InfoColumn">
+        <h2>Vad är detta?</h2>
+        <p>Det är ett föråd som backatorp har, som innehåller med redskap som man kan låna! </p>
+    </div>
+    <div class="InfoColumn">
+        <h2>Men hur lånar man redskapen</h2>
+        <p>MAn lånar redskapen genom att logga in på sidan och bokar redskapaen för den dagen man vill använda den.</p>
+    </div>
+    <div class="InfoColumn">
+        <h2>Vad händer om redskapen går sönder!</h2>
+        <p>Då kommer inget hända, utan att föriningen kommer ha mindre matrail att ta del av.</p>
+    </div>
+</div>
+<div class="InfoBigArea">
+    <h2>Vad finns i förådet</h2>
+    
+    <table>
+
+        <tr>
+            <th>Föremål</th>
+            <th>Antal</th>
+            <th>Bookad eller inte </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ItemName
+                </td>
+                <td>
+                    @item.Amount
+                </td>
+                <td>
+                    @item.booked
+                </td>
+            </tr>
+        }
+    </table>
+</div>

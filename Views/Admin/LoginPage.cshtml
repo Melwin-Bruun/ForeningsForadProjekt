@@ -1,0 +1,32 @@
+﻿@model Anvandare
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="~/css/login.css">
+    <title>Förådd hörnan</title>
+</head>
+<body>
+    <a id="login-picture" asp-action="Index" asp-controller="Home"><img src="~/Bilder/Backatorp_banner.jpg" alt="kort på loggan"></a>
+    <div class="login-box">
+        <h1>Login</h1>
+        <form asp-action="LoginPage" asp-route-returnurl="@ViewBag.ReturnUrl">
+            <label>Användarnamn:</label>
+            <input asp-for="AnvandareNamn" required />
+
+            <label>Lösernrd:</label>
+            <input asp-for="Losernord" type="password" required>
+
+            <button type="submit"> Logga in</button>
+        </form>
+        <p>Har du inget konto? <a asp-action="CreateAcountPage" asp-controller="Admin"> Skapa konto</a></p>
+        <p>
+            @ViewBag.ErrorMessage
+        </p>
+    </div>
+
+</body>
+</html>

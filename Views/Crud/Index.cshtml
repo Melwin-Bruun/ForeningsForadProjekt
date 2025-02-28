@@ -1,0 +1,22 @@
+﻿@{
+	Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+@model List<News>
+
+<a class="hero-länk" asp-action="NewsAdd">Lägg till ny film</a>
+<table class="table" border="1">
+	@foreach (var Info in Model)
+	{
+		<tr>
+			<td>@Info.Titel</td>
+			<td>@Info.Content </td>
+			<td>@Info.Author.AuthorNamn  </td>
+			<td>
+				<a asp-action="NewsUpdate" asp-route-id="@Info.Id">Ändra</a>
+			</td>
+			<td>
+				<a asp-action="NewsDelete" asp-route-id="@Info.Id">Radera</a>
+			</td>
+		</tr>
+	}
+</table>

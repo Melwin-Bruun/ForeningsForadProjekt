@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/LoginStyleSheet.css">
+    <link rel="stylesheet" href="../Css/StoreageStyleSheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Förådd hörnan</title>
+</head>
+<body>
+    <Header>
+        <a asp-action="Index" asp-controller="Admin"><img id="loga-bild" src="~/Bilder/Backatorp_loga.jpg" alt="backatop loga"></a>
+        <div class="login-container">
+            <button><a asp-action="SignOutUser" asp-controller="Admin">Logga ut</a></button>
+            <button><a asp-action="#" asp-controller="Admin">User</a></button> 
+        </div>
+    </Header>
+    <nav>
+        <ul class="nav-list">
+            <li><a asp-action="Index" asp-controller="Admin">Home</a></li>
+            <li><a asp-action="Storeage" asp-controller="Admin">Förråd</a></li>
+            <li><a asp-action="#" asp-controller="Services">Cafe</a></li>
+            <li><a asp-action="#" asp-controller="Services">Lokaler</a></li>
+            <li><a asp-action="#" asp-controller="Services">New body</a></li>
+            <li><a asp-action="#" asp-controller="Home">Om klubben</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p class="laget">Hitta oss på <a href="https://www.laget.se/BackatorpIF">laget.se</a></p>
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Kontakt uppgifter</h4>
+                <ul>
+                    <p>Email: <a href="mailto:email@example.com">kansliet@backatorpif.se</a></p>
+                    <p>Telefon: 0707-252618</p>
+                    <p>Address: Lillhagsvägen 247</p>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Följ oss på!</h4>
+                <ul>
+                    <p>Facebook: <a href="https://www.facebook.com/backatorpif/">Backatopr if</a> </p>
+                    <p>Instagram: <a href="https://www.instagram.com/backatorp_if_officiell/"> Backatorp if</a></p>
+                </ul>
+
+            </div>
+        </div>
+        <a class="laget" href="#" id="goToTop">Go to Top</a>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="~/js/script.js"></script>
+  
+</body>
+</html>
+

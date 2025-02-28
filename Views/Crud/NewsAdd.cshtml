@@ -1,0 +1,25 @@
+﻿@{
+	Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+
+@model News
+
+	<div>
+    <h1>Lägg till nyhter</h1>
+    <form asp-action="NewsAdd">
+        <label>Titel:</label>
+        <input asp-for="Titel" />
+
+        <label>Ínnehåll:</label>
+        <input asp-for="Content" >
+
+        <select asp-for="AuthorId">
+            @foreach (Author author in ViewBag.Author)
+            {
+                <option value="@author.Id">@author.AuthorNamn</option>
+            }
+        </select><br />
+
+        <button type="submit">skapa nyhet</button>
+    </form>
+	</div>

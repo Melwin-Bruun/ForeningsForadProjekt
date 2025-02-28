@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Förådd hörnan</title>
+</head>
+<body>
+    <Header>
+        <a asp-action="Index" asp-controller="Home"><img id="loga-bild" src="~/Bilder/Backatorp_loga.jpg" alt="backatop loga"></a>
+        <div class="login-container">
+            <button><a asp-action="CreateAcountPage" asp-controller="Admin">Skapa konto</a></button>
+            <button><a asp-action="LoginPage" asp-controller="Admin">Logga in</a></button> <!-- Vill ändra till cookies användar namn... -->
+        </div>
+    </Header>
+    <nav>
+        <ul class="nav-list">
+            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li><a asp-action="Storage" asp-controller="Services">Förråd</a></li>
+            <li><a asp-action="Cafe" asp-controller="Services">Cafe</a></li>
+            <li><a asp-action="Facilities" asp-controller="Services">Lokaler</a></li>
+            <li><a asp-action="NewBody" asp-controller="Services">New body</a></li>
+            <li><a asp-action="About" asp-controller="Home">Om klubben</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+    @RenderBody()
+    </main>
+
+    <footer>
+        <p class="laget">Hitta oss på <a href="https://www.laget.se/BackatorpIF">laget.se</a></p>
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Kontakt uppgifter</h4>
+                <ul>
+                    <p>Email: <a href="mailto:email@example.com">kansliet@backatorpif.se</a></p>
+                    <p>Telefon: 0707-252618</p>
+                    <p>Address: Lillhagsvägen 247</p>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Följ oss på!</h4>
+                <ul>
+                    <p>Facebook: <a href="https://www.facebook.com/backatorpif/">Backatopr if</a> </p>
+                    <p>Instagram: <a href="https://www.instagram.com/backatorp_if_officiell/"> Backatorp if</a></p>
+                </ul>
+
+            </div>
+        </div>
+        <a class="laget" href="#" id="goToTop">Go to Top</a>
+
+    </footer>
+
+    <script src="~/js/script.js"></script>
+</body>
+</html>
+

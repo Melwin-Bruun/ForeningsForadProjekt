@@ -1,0 +1,442 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+}
+
+/* Header css */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #DE0037;
+}
+
+/* login boxen för login knapparna*/
+.login-container {
+    width: fit-content;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+    /*  login kanppen*/
+    .login-container button {
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #333;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+        .login-container button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .login-container button:hover {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+            background-color: #ff5733;
+        }
+/* Banner av logan */
+#loga-bild {
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+}
+
+/* Sök inputen */
+.search-container button {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-container input {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+}
+
+/* Nav css*/
+nav {
+    background-color: #333;
+    padding: 1rem;
+    color: #fff;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+    /* NAv listorna */
+    .nav-list li {
+        margin: 0 3rem;
+    }
+
+        /* nav länkarna */
+        .nav-list li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+            /* nav länk hover */
+            .nav-list li a:hover {
+                color: #ff5733;
+            }
+
+
+/*Fotter css */
+footer {
+    background-color: #24262b;
+    padding: 35px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+    /* laget .se knapen */
+    footer .laget {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+
+        footer .laget a {
+            font-size: 16px;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            transition: all 0.3s ease;
+        }
+
+            footer .laget a:hover {
+                padding-left: 8px;
+                color: #ff5733;
+            }
+
+/* hur den är uppbyggd */
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .footer-col ul p {
+        font-size: 16px;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+        margin-top: 0.5rem;
+    }
+
+        .footer-col ul p a {
+            font-size: 16px;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+        }
+
+            .footer-col ul p a:hover {
+                color: #ff5733;
+            }
+
+/* Hero header css*/
+.hero {
+    background-image: url('/Bilder/markus-spiske-KWQ2kQtxiKE-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 2rem;
+}
+
+.hero-zero {
+    margin-top: 3rem;
+    background-image: none;
+    color: #333;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hero-länk {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 2rem;
+}
+
+    .hero-länk:hover {
+        background-color: #ff5733;
+    }
+
+/* bröd text css*/
+
+.text-container {
+    display: flex;
+    justify-content: center;
+}
+
+    .text-container img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 2rem;
+    }
+
+    .text-container .bröd-text {
+        display: flex;
+        align-self: center;
+    }
+
+        .text-container .bröd-text p {
+            width: fit-content;
+            max-width: 500px;
+            margin: 2rem;
+            align-items: center
+        }
+
+/* För informatonen på föråd sidan*/
+.InfoContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.InfoColumn {
+    flex: 1;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    margin: 1rem;
+    text-align: center;
+}
+InfoBigArea {
+    display: flex;
+    clear: both;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    margin: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.InfoBigArea table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+    .InfoBigArea table th, td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+
+.NewsInfoContainer {
+    text-align: center;
+}
+
+    .NewsInfoContainer ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem
+    }
+
+.NewsInfo {
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .NewsInfo li h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .NewsInfo p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+
+
+#goToTop {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 2rem;
+}
+
+    #goToTop:hover {
+        background-color: #ff5733;
+    }
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+    .table th, td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+/* breaken av css */
+@media screen and (max-width: 768px) {
+    header {
+        background-color: #DE0037;
+        max-width: 100%;
+        display: flex;
+        align-self: baseline;
+    }
+
+    .login-container button {
+        padding: 7px;
+        margin-top: 8px;
+        margin-right: 15px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+
+    #loga-bild {
+        max-width: 100px;
+        height: 50%;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .search-container input {
+        padding: 3px;
+        margin-top: 8px;
+        margin-right: 5px;
+        background: #ddd;
+        font-size: 12px;
+    }
+
+    nav {
+        font-size: 15px;
+    }
+
+    .nav-list li {
+        margin: 0 2rem;
+    }
+
+    .NewsInfoContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+        .NewsInfoContainer ul {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem
+        }
+
+    .NewsInfo {
+        width: 400px;
+        height: auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+        .NewsInfo li h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .NewsInfo p {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+}

@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/LogInLayout.cshtml";
+}
+
+@model List<Storeage>
+
+<div class="InfoBigArea">
+    <h2>Vad finns i förådet</h2>
+    <a a asp-action="StorageAdd" asp-controller="Crud" class="hero-länk">lägg till föremål</a>
+
+    <table class="table">
+
+        <tr>
+            <th>Föremål</th>
+            <th>Antal</th>
+            <th>Bookad</th>
+            <th>Update </th>
+            <th>Radera </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ItemName
+                </td>
+                <td>
+                    @item.Amount
+                </td>
+                <td>
+                    @item.booked
+                </td>
+                <td>
+                    <a asp-action="StorageUpdate" asp-route-id="@item.Id">Ändra</a>
+                </td>
+                <td>
+                    <a asp-action="StorageDelete" asp-route-id="@item.Id">Radera</a>
+                </td>
+
+
+            </tr>
+        }
+    </table>
+</div>
